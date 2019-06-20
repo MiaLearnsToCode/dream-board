@@ -22,13 +22,13 @@ class JobsIndex extends React.Component {
 
   filterJobs() {
     const regexp = new RegExp(this.state.searchTerm, 'i')
-    return this.state.data.filter(item => regexp.test(item.title))
+    return this.state.data.filter(item => regexp.test(item.title) || regexp.test(item.description) || regexp.test(item.location))
   }
 
   render() {
     return(
       <section className="container section">
-        <h1 className="title is-3">Browse jobs</h1>
+        <h1 className="title is-1">Search our vacancies</h1>
 
         <div className="search">
           <form>
@@ -45,12 +45,16 @@ class JobsIndex extends React.Component {
             </div>
           </form>
         </div>
-
-        <div className="columns is-mobile is-multiline">
-          {this.filterJobs().map(card => (
-            <JobCard key={card.id} {...card} />
-          ))}
-        </div>
+        {!this.state.data[0] &&
+          <img className="spinner" src="https://offerscouponsdeals.in/public/ocd_images/overlay-loader.gif" alt="Loading"/>
+        }
+        {this.state.data &&
+          <div className="columns is-mobile is-multiline">
+            {this.filterJobs().map(card => (
+              <JobCard key={card.id} {...card} />
+            ))}
+          </div>
+        }
       </section>
 
     )

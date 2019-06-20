@@ -8,7 +8,7 @@ const JobCard = ({company, title, location, company_logo, id }) => {
       <Link to={`/jobs/${id}`}>
         <div className="card">
           <p className="title is-4">{title}</p>
-          <div className="columns">
+          <div className="columns card-details">
             <div className="column is-half">
               {company_logo &&
                 <div className="card-image">
@@ -27,7 +27,7 @@ const JobCard = ({company, title, location, company_logo, id }) => {
             </div>
             <div className="column is-half">
               <p className="subtitle is-6">{company}</p>
-              <p className="subtitle is-6">{location}</p>
+              <p className="subtitle is-6">🌏 {location}</p>
             </div>
           </div>
         </div>

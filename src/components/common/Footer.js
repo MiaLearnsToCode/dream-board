@@ -4,7 +4,7 @@ const Footer = () => {
   return(
     <footer className="footer is-paddingless">
       <p>
-        <strong>DreamJob</strong> by <a href="https://jgthms.com"> Mia&Ola</a>
+        <strong>DreamJob</strong> by <a href="https://github.com/MiaLearnsToCode"> Mia </a> & <a href="https://github.com/leealex88"> Ola </a> 
       </p>
     </footer>
   )
