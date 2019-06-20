@@ -5,7 +5,8 @@ import JobCard from './JobCard'
 class JobsIndex extends React.Component {
   constructor(){
     super()
-    this.state = {data: [] }
+    this.state = { data: [], searchTerm: '' }
+    this.handleChange = this.handleChange.bind(this)
   }
 
   componentDidMount () {
@@ -14,26 +15,39 @@ class JobsIndex extends React.Component {
       .catch(err => console.log(err))
   }
 
+
+  handleChange(e) {
+    this.setState({ searchTerm: e.target.value })
+  }
+
+  filterJobs() {
+    const regexp = new RegExp(this.state.searchTerm, 'i')
+    return this.state.data.filter(item => regexp.test(item.title))
+  }
+
   render() {
     return(
       <section className="container section">
         <h1 className="title is-3">Browse jobs</h1>
 
-        <div className="columns is-mobile">
-          <div className="column is-one-fifth-desktop is-full-tablet is-full-mobile"></div>
-          <div className="column has-text-centered">
-            <form>
-              <input type="search" />
-              <input type="dropdown" />
-              <input type="drowpdown" />
-              <button className="button is-primary">Search</button>
-            </form>
-          </div>
-          <div className="column is-one-fifth is-full-tablet is-full-mobile"></div>
+        <div className="search">
+          <form>
+            <div className="field">
+              <div className="control">
+                <input
+                  className="input is-primary"
+                  type="text"
+                  placeholder="Title, stack, city etc."
+                  onChange={this.handleChange}
+                  value={this.state.searchTerm}
+                />
+              </div>
+            </div>
+          </form>
         </div>
 
         <div className="columns is-mobile is-multiline">
-          {this.state.data.map(card => (
+          {this.filterJobs().map(card => (
             <JobCard key={card.id} {...card} />
           ))}
         </div>

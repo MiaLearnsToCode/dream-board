@@ -2,6 +2,14 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #FAFAFA;
+}
+
+a.nav-item {
+  font-weight: bold;
+}
+
 .hero {
   background-image: url("https://images.pexels.com/photos/123335/pexels-photo-123335.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
   background-repeat: no-repeat;
@@ -12,21 +20,77 @@
   min-height:100vh;
 }
 
+.search {
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.field {
+  margin: 100px 30px 50px 30px;
+}
+
+input.input.is-primary {
+  min-width: 600px;
+}
+div.card:hover {
+  transform:scale(1.005);
+  box-shadow: 2px 10px 20px rgba(0,209,178,0.4);
+}
 .card{
   padding:30px 20px;
   margin:20px;
   border-radius: 5px;
   height: 350px;
-  img{
+  img {
     max-width: 80px;
     margin-right: 10px;
+  }
+  strong, p, h2{
+    margin: 0px;
   }
 }
 
 .details{
-  display: flex;
-  align-items: center;
+  padding-right:50px;
+  text-align: justify;
+  img {
+    margin-top: 50px;
+  }
+  .more-details{
+    background-color: #00d1b2;
+    text-align: center;
+    padding:30px;
+    margin-top: 70px;
+    line-height: 20px;
+    border-radius: 5px;
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
 
+.is-two-thirds {
+  background-color: white;
+  box-shadow: 2px 10px 20px #D5DBDB;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.apply-title {
+  margin-top: 30px;
+}
+
+.apply {
+  background-color: #00d1b2;
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  a {
+    color: white;
+    text-decoration: none;
+  }
 }
 
 form{
@@ -39,9 +103,24 @@ form{
   }
 }
 
-footer {
+.footer {
   height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: white;
+}
+
+strong, h2 {
+  margin:15px 0px;
+}
+
+p {
+  margin:10px 0px;
+}
+
+@media screen and (max-width: 992px) {
+  input.input.is-primary {
+    min-width: 300px;
+  }
 }
