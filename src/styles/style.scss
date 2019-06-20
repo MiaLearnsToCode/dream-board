@@ -1,1 +1,47 @@
+* {
+  box-sizing: border-box;
+}
 
+.hero {
+  background-image: url("https://images.pexels.com/photos/123335/pexels-photo-123335.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.section {
+  min-height:100vh;
+}
+
+.card{
+  padding:30px 20px;
+  margin:20px;
+  border-radius: 5px;
+  height: 350px;
+  img{
+    max-width: 80px;
+    margin-right: 10px;
+  }
+}
+
+.details{
+  display: flex;
+  align-items: center;
+
+}
+
+form{
+  display:flex;
+  justify-content: space-between;
+
+  input{
+    padding:5px;
+    border-radius: 5px;
+  }
+}
+
+footer {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
