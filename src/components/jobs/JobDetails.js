@@ -13,9 +13,12 @@ class JobDetails extends React.Component {
   }
 
   render() {
-    console.log(this.state.data)
     return(
       <section className="container section">
+        {this.state.data.length === 0 &&
+        <img className="spinner" src="https://offerscouponsdeals.in/public/ocd_images/overlay-loader.gif" alt="Loading"/>
+        }
+        {this.state.data.length !== 0 &&
         <div className="columns is-mobile is-multiline" >
           <div className="column is-one-third details">
             {this.state.data.company_logo &&
@@ -51,9 +54,9 @@ class JobDetails extends React.Component {
             <div className="has-text-justified" dangerouslySetInnerHTML={{ __html: `${this.state.data.description}`}} />
             <p className="title is-4 apply-title">Apply here:</p>
             <div className="has-text-justified apply" dangerouslySetInnerHTML={{ __html: `${this.state.data.how_to_apply}`}} />
-
           </div>
         </div>
+        }
       </section>
     )
   }

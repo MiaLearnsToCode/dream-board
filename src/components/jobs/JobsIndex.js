@@ -48,11 +48,16 @@ class JobsIndex extends React.Component {
         {!this.state.data[0] &&
           <img className="spinner" src="https://offerscouponsdeals.in/public/ocd_images/overlay-loader.gif" alt="Loading"/>
         }
-        {this.state.data &&
-          <div className="columns is-mobile is-multiline">
-            {this.filterJobs().map(card => (
-              <JobCard key={card.id} {...card} />
-            ))}
+        {this.state.data[0] &&
+          <div>
+            {this.filterJobs().length < 50 &&
+              <p>Matches found: {this.filterJobs().length}</p>
+            }
+            <div className="columns is-mobile is-multiline">
+              {this.filterJobs().map(card => (
+                <JobCard key={card.id} {...card} />
+              ))}
+            </div>
           </div>
         }
       </section>
