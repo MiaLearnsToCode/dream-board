@@ -61,12 +61,13 @@ Once you land on the jobs listing page (JobsIndex.js), a function runs to get th
 
 In this page there is also a search box which allows the user to filter through the array of cards and find the jobs that match their search. This is done using the filterJob function which returns a filtered array of jobs:
 
-```
+```js
 filterJobs() {
   const regexp = new RegExp(this.state.searchTerm, 'i')
   return this.state.data.filter(item => regexp.test(item.title) || regexp.test(item.description) || regexp.test(item.location))
 }
 ```
+
 
 <img src="src/assets/imagefour.png" width="900">
 
@@ -75,13 +76,15 @@ filterJobs() {
 
 If you click on one of the cards in the job listings page you are redirected to a page with more details about the job. In this jobs details page there is a function that loads the API data specifically for the right job using the ID of the chosen card:
 
-```
+
+```js
 componentDidMount () {
   axios.get(`https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions/${this.props.match.params.id}.json`)
     .then(res => this.setState({data: res.data}))
     .catch(err => console.log(err))
 }
 ```
+
 
 The page includes the job title, location, description (etc.) as well as more details on how to apply.
 
@@ -104,7 +107,7 @@ In terms of future improvements, instead of the filter input we will like to add
 
 <img src="src/assets/imageseven.png" width="900">
 
-We would also like to add a "sort by recently added" option to display the most recently published job offers at the top of the page. 
+We would also like to add a "sort by recently added" option to display the most recently published job offers at the top of the page.
 
 ## Authors
 
