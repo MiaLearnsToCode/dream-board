@@ -53,8 +53,13 @@ class JobDetails extends React.Component {
             <p className="title is-2">
               <strong>{this.state.data.title}</strong>
             </p>
+            <br />
+            <p className="subtitle is-6">
+              Date added: {this.state.data.created_at.slice(0, 11)}
+            </p>
+            <hr />
             <p className="title is-4">
-              <small>{this.state.data.company}</small>
+              <small>Company: {this.state.data.company}</small>
             </p>
             <div className="has-text-justified" dangerouslySetInnerHTML={{ __html: `${this.state.data.description}`}} />
             <p className="title is-4 apply-title">Apply here:</p>
