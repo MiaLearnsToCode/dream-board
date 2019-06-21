@@ -1,6 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+// This is a functional component which includes the code for producing each individual card in the JobsIndex page (which is the parent of this component).
+// It includes the title, company and its logo and the location. The data is passed down by it's parent component.
+// Each card has a link that leads to the page which has more details on the specific job.
+
 const JobCard = ({company, title, location, company_logo, id }) => {
   return(
 
@@ -38,5 +42,3 @@ const JobCard = ({company, title, location, company_logo, id }) => {
 }
 
 export default JobCard
-
-//

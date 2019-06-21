@@ -2,6 +2,13 @@ import React from 'react'
 import axios from 'axios'
 import JobCard from './JobCard'
 
+// This is a class component which includes a title, a search bar and the cards with summaries of the jobs in the website
+// In the componentDidMount function the data of the job is imported using axios as it is a third party API by github
+// The handleChange function is invoked in the search bar and it listens to the user typing. The user input is saved inside of this.state.searchTerm.
+// The filter jobs function produces a RegExp of the searched input and it returns a new array of filtered jobs whose data matches the input of the user (title, location and description).
+// The array returned by the filter function is mapped inside the JSX so that only the cards that match the search term are returned to the user.
+// The card template is stored in the JobCard component 
+
 class JobsIndex extends React.Component {
   constructor(){
     super()

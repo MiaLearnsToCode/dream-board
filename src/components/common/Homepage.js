@@ -1,4 +1,7 @@
 import React from 'react'
+// This is a functional component which includes the code for the homepage.
+// Here you can find the title of the project and a short description of what the website does.
+// This component is one of the Routes inside of the app.js and is a first page the users see when they land on the project.
 
 const Homepage = () => {
   return(

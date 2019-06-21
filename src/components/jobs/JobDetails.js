@@ -1,5 +1,10 @@
 import React from 'react'
 import axios from 'axios'
+
+// This is a class component which displays the data of each individual job in more detail.
+// The componentDidMount function performs a get request only for the needed job and its data.
+// The JSX code displays the title, image, description etc...
+
 class JobDetails extends React.Component {
   constructor(){
     super()
