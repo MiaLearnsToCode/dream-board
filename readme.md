@@ -63,7 +63,7 @@ Once you land on the jobs listing page (JobsIndex.js), a function runs to get th
 
 ---
 
-In this page there is also a search box which allows the user to filter through the array of cards and find the jobs that match their search. This is done using the filterJob function which returns a filtered array of jobs:
+In this page there is a search box which allows the user to filter through the array of cards and find the jobs that match their search. This is done using the filterJob function which returns a filtered array of jobs:
 
 ```js
 filterJobs() {
@@ -72,8 +72,9 @@ filterJobs() {
 }
 ```
 
-
 <img src="src/assets/imagefour.png" width="900">
+
+At the bottom of the page there is also a pagination feature that allows the user to navigate the job listings more easily.
 
 ---
 ### Job details page
