@@ -7,21 +7,25 @@ import JobCard from './JobCard'
 // The handleChange function is invoked in the search bar and it listens to the user typing. The user input is saved inside of this.state.searchTerm.
 // The filter jobs function produces a RegExp of the searched input and it returns a new array of filtered jobs whose data matches the input of the user (title, location and description).
 // The array returned by the filter function is mapped inside the JSX so that only the cards that match the search term are returned to the user.
-// The card template is stored in the JobCard component 
+// The card template is stored in the JobCard component
 
 class JobsIndex extends React.Component {
   constructor(){
     super()
-    this.state = { data: [], searchTerm: '' }
+    this.state = { data: [], searchTerm: '', page: '1' }
     this.handleChange = this.handleChange.bind(this)
   }
 
-  componentDidMount () {
-    axios.get('https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json')
+  componentDidMount() {
+    this.handlePage('1')
+  }
+
+  handlePage(n) {
+    this.setState({data: []})
+    axios.get(`https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?page=${n}`)
       .then(res => this.setState({data: res.data}))
       .catch(err => console.log(err))
   }
-
 
   handleChange(e) {
     this.setState({ searchTerm: e.target.value })
@@ -60,6 +64,7 @@ class JobsIndex extends React.Component {
             {this.filterJobs().length < 50 &&
               <p>Matches found: {this.filterJobs().length}</p>
             }
+            <hr />
             <div className="columns is-mobile is-multiline">
               {this.filterJobs().map(card => (
                 <JobCard key={card.id} {...card} />
@@ -67,6 +72,41 @@ class JobsIndex extends React.Component {
             </div>
           </div>
         }
+        <hr />
+        <nav className="pagination" role="navigation" aria-label="pagination">
+          <ul className="pagination-list">
+            <li>
+              <button
+                onClick={() => this.handlePage('1')}
+                className="pagination-link">1</button>
+            </li>
+            <li>
+              <button
+                onClick={() => this.handlePage('2')}
+                className="pagination-link">2</button>
+            </li>
+            <li>
+              <button
+                onClick={() => this.handlePage('3')}
+                className="pagination-link">3</button>
+            </li>
+            <li>
+              <button
+                onClick={() => this.handlePage('4')}
+                className="pagination-link">4</button>
+            </li>
+            <li>
+              <button
+                onClick={() => this.handlePage('5')}
+                className="pagination-link">5</button>
+            </li>
+            <li>
+              <button
+                onClick={() => this.handlePage('6')}
+                className="pagination-link">6</button>
+            </li>
+          </ul>
+        </nav>
       </section>
 
     )

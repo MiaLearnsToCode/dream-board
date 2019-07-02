@@ -19,7 +19,7 @@ This is a job board, built using Github Jobs API (https://jobs.github.com/api).
 
 ## Deployment
 
-The game is deployed on Heroku and it can be found here:
+The job board is deployed on Heroku and it can be found here:
 
 ## Getting Started
 
@@ -42,6 +42,10 @@ Because we only had two days to complete the project and only needed to perform 
 Once we chose which API to use we began to design the wireframes and the UX. Here are some notes we took at the beginning of the process:
 
 <img src="src/assets/imageone.jpg" width="400">
+
+and here is a mind-map we used to plan and structure the project:
+
+<img src="src/assets/imageeight.png" width="900">
 
 ---
 ### Homepage
