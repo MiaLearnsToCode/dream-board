@@ -11,11 +11,10 @@ This project is a job board, built using Github Jobs API (https://jobs.github.co
 
 ## Built With
 
-* HTML5
-* SCSS & Animation
-* Javascript (ECMAScript6)
-* React.js
-* GitHub
+
+| HTML5 | SCSS  | Javascript  | GitHub  |
+|   | Animation  | ECMAScript6  | Git versions control  |
+|   | | React.js  | |
 
 ## Deployment
 
