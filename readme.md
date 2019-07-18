@@ -13,11 +13,11 @@ This project is a job board, built using Github Jobs API (https://jobs.github.co
 
 1. HTML5 
 2. SCSS
-  * Animation
+   * Animation
 3. Javascript
-  * ECMAScript6
-  * React.js
-  * axios 
+   * ECMAScript6
+   * React.js
+   * axios 
 4. GitHub
 
 ## Deployment
