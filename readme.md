@@ -1,7 +1,7 @@
 ![ga_cog_large_red_rgb](https://cloud.githubusercontent.com/assets/40461/8183776/469f976e-1432-11e5-8199-6ac91363302b.png)
 
 # Software Engineneering Immersive: Project 2
-This is my second project during the General Assembly Software Engineering Immersive course (Week 6). It was part of a two-day long "Reactathon" and it was made in collaboration with Aleksandra Skoczylas (https://github.com/leealex88).
+This is my second project during the General Assembly Software Engineering Immersive course (Week 6). The project was made in collaboration with Aleksandra Skoczylas (https://github.com/leealex88) as part of a two-day long "Reactathon".
 
 ---
 
