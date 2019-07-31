@@ -12,7 +12,7 @@ import JobCard from './JobCard'
 class JobsIndex extends React.Component {
   constructor(){
     super()
-    this.state = { data: [], searchTerm: '', page: '1' }
+    this.state = { data: [], searchTerm: ''}
     this.handleChange = this.handleChange.bind(this)
   }
 
