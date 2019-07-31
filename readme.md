@@ -19,7 +19,7 @@ This is a job board, built using Github Jobs API (https://jobs.github.com/api).
 
 ## Deployment
 
-The job board is deployed on Heroku and it can be found here:
+The job board is deployed on Heroku and it can be found here: https://dreamboard-jobs.herokuapp.com/
 
 ## Getting Started
 
